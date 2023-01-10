@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends "TestApp/base.html" %}
+{% block div_content %}
+
+    <ul>
+    {% for key, value in cripto.items %}
+        <li>{{key}}</li>
+        <ul>
+        {% for y, z in value.items %}
+            <li>{{y}} - {{z}}</li>
+        {% endfor %}
+        </ul>
+        <br>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
+
